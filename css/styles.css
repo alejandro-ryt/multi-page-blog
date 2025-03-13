@@ -181,3 +181,20 @@ form textarea {
     height: 8rem;
     resize: vertical;
 }
+
+/* Responsive Design */
+@media screen and (max-width: 524px) {
+    .user-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    nav {
+        justify-content: center !important;
+    }
+
+    .logo {
+        display: none;
+    }
+}
