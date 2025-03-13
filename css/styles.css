@@ -1,0 +1,183 @@
+:root {
+    --primary-color: #2f3542;
+    --secondary-color: #ff6347;
+    --light-color: #dfe6e9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Lato, sans-serif !important;
+    line-height: 1.6;
+    background-color: var(--light-color);
+    scroll-behavior: smooth;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--light-color);
+    color: var(--primary-color);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav .logo {
+    width: 3rem;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-left: 1.5rem;
+    font-style: italic;
+}
+
+header nav span {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 1.5rem;
+    cursor: pointer;
+}
+
+header nav span:hover {
+    color: var(--secondary-color);
+}
+
+header nav .user-img {
+    background-image: url('https://media.licdn.com/dms/image/v2/D5603AQHBCubV3jTtdQ/profile-displayphoto-shrink_400_400/B56ZSRWiVVHwAk-/0/1737605392121?e=1747267200&v=beta&t=bQmNBEuRzV726RkqG9OxP-vkKoyFm1OTUamsw_JpAQE');
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: var(--secondary-color) solid 1px;
+    margin-right: 1.5rem;
+    background-size: cover;
+}
+
+main {
+    max-width: 64rem;
+    margin: 0 auto;
+    margin-top: 5rem;
+    padding: 1.5rem 0.5rem;
+}
+
+main h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.blog-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    grid-gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-preview article {
+    margin-bottom: 1.5rem;
+}
+
+.blog-preview figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+figure {
+    margin-bottom: .5rem;
+}
+
+figcaption {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    margin-left: .25rem;
+}
+
+article p {
+    margin-left: .25rem;
+}
+
+article p span {
+    font-weight: bold;
+    color: var(--secondary-color);
+    cursor: pointer;
+    text-decoration: underline;
+    transition: background-color 0.3s ease;
+}
+
+article p span:hover {
+    color: #ec4224;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1rem;
+    padding: .7rem 1.5rem;
+    border: none;
+    border-radius: .75rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ec4224;
+}
+
+/* Blog page */
+.blog-image {
+    width: 100%;
+}
+
+/* Contact page */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form div {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+form input,
+textarea {
+    margin: .5rem 0rem;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    color: var(--primary-color);
+    border-radius: .75rem;
+    outline: none;
+    border: none;
+}
+
+form textarea {
+    height: 8rem;
+    resize: vertical;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to my blog. Read the latest posts on various topics.">
+    <meta property="og:title" content="Contact | Alejandro Solano">
+    <meta property="og:description" content="Welcome to my blog. Read the latest posts on various topics.">
+    <meta property="og:image" content="https://picsum.photos/200">
+    <title>Contact | Alejandro Solano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <p class="logo">Bloggie.</p>
+            <div>
+                <span onclick="transitionToPage('index.html')">Home</span>
+                <span onclick="transitionToPage('blog.html')">Blog</span>
+                <span onclick="transitionToPage('contact.html')">Contact</span>
+            </div>
+            <span class="user-img"></span>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-form">
+            <h1>Contact Us</h1>
+            <form action="#" id="contact-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 RYT Blog.</p>
+    </footer>
+
+    <script>
+        window.transitionToPage = function (href) {
+            document.querySelector('body').style.opacity = 0
+            setTimeout(function () {
+                window.location.href = href
+            }, 500)
+        }
+
+        document.addEventListener('DOMContentLoaded', function (event) {
+            document.querySelector('body').style.opacity = 1
+        })
+    </script>
+</body>
+
+</html>
